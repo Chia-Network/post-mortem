@@ -3,19 +3,22 @@
 
 ## Issue Summary
 
-At aprproximately <Timestamp> on 5-9 The user Bitmexbot, edited the installer instruction page of the wiki. To point the install links to a malicious URL <URL HERE>
-
-
+At aprproximately <Timestamp> on May 9th, 2021, the user account *Bitmexbot*, edited the installer instruction page of the wiki to direct the link for the Windows installer to a third-party host unassociated with the Chia project. This host was likely compromised and used as a jump-point/payload distributor by an as-yet unknown group. The installer delivered a malware payload instead of the Chia installation files.
 
 ## Timeline
-> (all times in Pacific Time)
+> (all times in Pacific Time) - I'd use UTC
 
 ## Root Cause
-Maliciou users attempted to redirect downloads to <URL>
+Maliciou users attempted to redirect downloads to a host unrelated to the Chai project. This host is likely a third-party host previously compromised and used to seed content and/or act as a jump point.
+
+Efforts to analyze the malware are ongoing at this time. These efforts include both security professional analysis and submission to industry standard pattern analysis engines. The [VirusTotal information](https://www.virustotal.com/gui/file-analysis/Y2JmMzVhNTUyZDRlZDliZjZhMmMxODE5MGQwYmQ4NmI6MTYyMDgzMTAzOA==/detection) indicates that a number of commercial antimalware engines now detect this malware installer.
+
 ## Resolution and recovery
-wiki is locked, users banned
+The wiki has been secured and the account used to make the modification has been banned.
 
 ## Corrective and Preventative Measures
-did analysis found <Findings>
-Wiki page wont have installs anymore
-new install page here <URL>
+Securing the wiki was the first corrective action. Further the wiki will no longer include a link to the installer binaries. These binaries can now be found at <link>
+
+The team remains vigilant to activity on the Chia project resources at this time.
+
+The new installation page can be found at <link>
