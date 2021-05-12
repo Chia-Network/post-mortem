@@ -3,7 +3,7 @@
 
 ## Issue Summary
 
-At aprproximately <Timestamp> on 5-9 The user Bitmexbot, edited the installer instruction page of the wiki. To point the install links to a malicious URL <URL HERE>
+At aprproximately 09:15:04 Monday May 10th (UTC) The user Bitmexbot, edited the installer instruction page of the wiki. Pointing the install links to a malicious URL.
 
 ## Timeline (all times UTC) Monday May 10th, 2021
 
@@ -29,12 +29,21 @@ Date:   Mon May 10 11:15:04 2021 +0200
     Updated INSTALL (markdown)
 
 ## Root Cause
-Maliciou users attempted to redirect downloads to (MALICIOUS LINK!!!! VIRUS) https://rvmis.com/vendor/ChiaSetup-1.1.4.rar
+
+Malicious user redirected downloads to (MALICIOUS LINK!!!! VIRUS) https://rvmis.com/vendor/ChiaSetup-1.1.4.rar with an unreviewed wiki edit, via what we believe to be the Github web UI.
 
 ## Resolution and recovery
-wiki is locked, users banned
+
+We immediately contacted Github support to get the malicious user banned.
+This action took about 48 hours but the user is now banned from Github.
+We immediately locked the wiki and will no longer be sharing install links on publicly editable pages.
+Mariano published a fix to the malicious URL immediately upon noticing the issue.
+Total time to resolution approximately 49 minutes.
+We have continue analysis of the malicious .rar file and have findings about its possible origin, intent, and potential impact on any victims.
+
+## Malicious file findings
 
 ## Corrective and Preventative Measures
-did analysis found <Findings>
+
 Wiki page wont have installs anymore
 new install page here <URL>
