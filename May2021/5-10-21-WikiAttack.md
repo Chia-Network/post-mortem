@@ -57,6 +57,10 @@ Network traffic analysis of the installation showed traffic utilizing the Window
 
 [VirusTotal details](https://www.virustotal.com/gui/file/476cdefcc0cd45525c7dc73a1dd0a1c97698c047dfaacdbf70ad32fc6bb65ee4/detection) a list of AV vendors catching this package.
 
+https://drive.google.com/file/d/1KHx5zL7mUOf2QFt9mWxexhE4sxa_Zxc6/view?usp=sharing
+
+https://drive.google.com/file/d/1qMWQK2n6LDKrmurfhTvhp0Q9X-Uzz6lS/view?usp=sharing
+
 ## Corrective and Preventative Measures
 
 Wiki page wont have installs anymore
