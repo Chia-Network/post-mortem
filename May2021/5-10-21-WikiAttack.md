@@ -61,7 +61,7 @@ https://drive.google.com/file/d/1KHx5zL7mUOf2QFt9mWxexhE4sxa_Zxc6/view?usp=shari
 
 https://drive.google.com/file/d/1qMWQK2n6LDKrmurfhTvhp0Q9X-Uzz6lS/view?usp=sharing
 
-## Corrective and Preventative Measures
+## Corrective and Preventative Measure
 
-Wiki page wont have installs anymore
-new install page here <URL>
+The installation wiki page will be changed to no longer include installer links. The installers will live at chian.net/install and download.chia.net. The wiki will remain locked until that time. 
+
