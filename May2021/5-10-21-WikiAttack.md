@@ -63,5 +63,5 @@ https://drive.google.com/file/d/1qMWQK2n6LDKrmurfhTvhp0Q9X-Uzz6lS/view?usp=shari
 
 ## Corrective and Preventative Measure
 
-The installation wiki page will be changed to no longer include installer links. The installers will live at chian.net/install and download.chia.net. The wiki will remain locked until that time. 
+The installation wiki page will be changed to no longer include installer links. The installers will live at chia.net/install and download.chia.net. The wiki will remain locked until that time. 
 
