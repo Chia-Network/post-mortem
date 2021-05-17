@@ -1,6 +1,3 @@
-
-# 5-10-21 Installer Attack
-
 ## Issue Summary
 
 At approximately 09:15:04 Monday May 10th (UTC), 2021, the user account *Bitmexbot*, edited the installer instruction page of the wiki to direct the link for the Windows installer to a third-party host unassociated with the Chia project.
