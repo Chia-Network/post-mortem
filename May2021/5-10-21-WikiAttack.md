@@ -4,7 +4,7 @@ At approximately 09:15:04 Monday May 10th (UTC), 2021, the user account *Bitmexb
 
 ## Timeline (all times UTC) Monday May 10th, 2021. All times approximations
 
-- 09:15:04 UTC an edit was made to the install documents on the GitHub wiki, pointing the windows install link to (MALICIOUS LINK!!!! VIRUS) https://rvmis.com/vendor/ChiaSetup-1.1.4.rar (this url is now defunct).
+- 09:15:04 UTC an edit was made to the install documents on the GitHub wiki, pointing the windows install link to (MALICIOUS LINK!!!! VIRUS) ```https://rvmis.com/vendor/ChiaSetup-1.1.4.rar``` (this url is now defunct).
 
 - 09:30:00 UTC Reports of the change began to reach Chia tech support on keybase.
 
@@ -14,7 +14,7 @@ At approximately 09:15:04 Monday May 10th (UTC), 2021, the user account *Bitmexb
 
 ## Root Cause
 
-Malicious user redirected downloads to (MALICIOUS LINK!!!! VIRUS) https://rvmis.com/vendor/ChiaSetup-1.1.4.rar with an unreviewed wiki edit, via what we believe to be the Github web UI.
+Malicious user redirected downloads to (MALICIOUS LINK!!!! VIRUS) ```https://rvmis.com/vendor/ChiaSetup-1.1.4.rar``` with an unreviewed wiki edit, via what we believe to be the Github web UI.
 
 ## Relevant Commit history
 
