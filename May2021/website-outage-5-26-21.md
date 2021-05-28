@@ -30,11 +30,11 @@ Github engineers are continuing investigation for a root cause to this issue. At
 
 ## Resolution and recovery
 
-Github support engineers were able to recover fully function github pages CI and return the site to its working state, by manually reengaging the underlying CI process after clearing out the previous stalled tasks.
+Github support engineers were able to recover the full functionality of github pages CI, and return the site to its previous working state. This was accomplished by manually reengaging the underlying CI process after clearing out the previous stalled tasks.
 
 ## Corrective and Preventative Measures
 
 Going forward the Chia team is going to rebuild the site deployment process to allow for a more mature and modern release cycle.
 The ideal pattern would be one with quick failover from a fatal delivery error, and some quality of life improvements to make content and other changes simpler, lowering their blast radius.
 Most importantly Chia is aiming at a "five nines" solution for our website, as stability in our web presence is valuable to us and the goals of the chia project.
-Chia operations engineers are working to build these patterns at this moment. 
+Chia operations engineers are working to build these patterns at this moment.
