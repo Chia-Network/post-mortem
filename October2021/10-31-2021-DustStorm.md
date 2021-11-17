@@ -116,5 +116,3 @@ __A:__ There was a bit of a misconception going around that we launched without 
 
 __Q: Why did the netspace go down?__
 __A:__ The netspace only fluctuated briefly as a result of low power nodes going out of sync, which in turn made any farmers attached to them unable to farm, causing the available netspace to decrease. As netspace is estimated over a rolling time window, this meant that the space decreased to a slight delay behind the actual issues, and took an accordingly length of time to adjust back once it was over before normalizing once again.
-
-
