@@ -57,7 +57,7 @@ Dust storm times (in block heights):
 
 10:00 AM PST Monday Nov 1st: Formal planning for the emergency patch is set, all engineering tasks are assigned for completion, with a target release date of 11/03. 
 
-![Testnet Dust Storm Graph](/assets/images/testnet-dust-storm-graph.png)
+![10-31-2021 Dust Storm Graph](/assets/images/10-31-2021-dust-storm.jpg)
 
 ## Root Cause
 
@@ -89,7 +89,7 @@ Chia has temporarily upgraded our min spec for low end nodes to still be the Pi4
 ## Testnet Dust Storm
 On Monday November 1st 2021, we began running our own version of a dust storm spam bot on testnet 7. Below is a graph of a similar duration of transactions being sent. Most critically you will note that our dust storm which we used to test the 1.2.11 changes pre release created as many as 65,000 transactions in the mempool which is 11.3 times more transactions in the mempool than the original dust storm attempt. This gives our engineers confidence that we have tested against similarly harsh conditions seen during the mainnet dust storm and beyond, and allows our team to trust that we have mitigated many of the performance issues present in the lower end of nodes with the 1.2.11 upgrade. 
 
-https://drive.google.com/file/d/1A77Y8h2G-Naq272gG4aUxGXcmZVY7SlB/view?usp=sharing
+![Testnet Dust Storm Graph](/assets/images/testnet-dust-storm-graph.png)
 
 ## Q&A
 
@@ -116,5 +116,3 @@ __A:__ There was a bit of a misconception going around that we launched without 
 
 __Q: Why did the netspace go down?__
 __A:__ The netspace only fluctuated briefly as a result of low power nodes going out of sync, which in turn made any farmers attached to them unable to farm, causing the available netspace to decrease. As netspace is estimated over a rolling time window, this meant that the space decreased to a slight delay behind the actual issues, and took an accordingly length of time to adjust back once it was over before normalizing once again.
-
-
