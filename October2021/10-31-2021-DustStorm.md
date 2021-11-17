@@ -57,7 +57,7 @@ Dust storm times (in block heights):
 
 10:00 AM PST Monday Nov 1st: Formal planning for the emergency patch is set, all engineering tasks are assigned for completion, with a target release date of 11/03. 
 
-10-31-2021-dust-storm.JPG
+https://drive.google.com/file/d/1w7pQXcyztJOqev97wqJ-G2BvH7UJRukF/view?usp=sharing
 
 ## Root Cause
 
@@ -89,7 +89,7 @@ Chia has temporarily upgraded our min spec for low end nodes to still be the Pi4
 ## Testnet Dust Storm
 On Monday November 1st 2021, we began running our own version of a dust storm spam bot on testnet 7. Below is a graph of a similar duration of transactions being sent. Most critically you will note that our dust storm which we used to test the 1.2.11 changes pre release created as many as 65,000 transactions in the mempool which is 11.3 times more transactions in the mempool than the original dust storm attempt. This gives our engineers confidence that we have tested against similarly harsh conditions seen during the mainnet dust storm and beyond, and allows our team to trust that we have mitigated many of the performance issues present in the lower end of nodes with the 1.2.11 upgrade. 
 
-Screen Shot 2021-11-16 at 6.15.18 PM.png
+https://drive.google.com/file/d/1A77Y8h2G-Naq272gG4aUxGXcmZVY7SlB/view?usp=sharing
 
 ## Q&A
 
