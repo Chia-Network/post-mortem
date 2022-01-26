@@ -4,7 +4,7 @@
 
 __Type of Incident Detected__: Potential compromise of employee's Google Admin Account
 
-__Initial Concerns__: On Thursday, January 20th, 2021 at 22:04 (UTC) an employee's account was suspended by an admin account, per the audit logs. 
+__Initial Concerns__: On Thursday, January 20th, 2022 at 22:04 (UTC) an employee's account was suspended by an admin account, per the audit logs. 
                       However, the admin did not perform the suspension of the account and the action originated from an IP address associated with an
                       AWS EC2 instance.
 
@@ -19,7 +19,7 @@ IPS team: Infrastructure, Platforms, and Security members who responded to the p
 
 Date/Time Stamps (Captured from keybase messages)
 
-| Day | Date (2021) | Time (UTC) | Event |
+| Day | Date (2022) | Time (UTC) | Event |
 |-----|-------------|-----------|-------|
 | Thur | Jan 20 | 22:40 | Affected employee logged out of Google Workspace account and received a prompt that his account was disabled, upon attempting to log back in.
 | Thur | Jan 20 | 22:06 | IPS team observed that the affected employee's Google Workspace account was suspended by another employee with administrator rights, when reviewing the audit logs in Google Admin. No abnormal login activity for detected for either employee.
