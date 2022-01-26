@@ -34,8 +34,8 @@ Date/Time Stamps (Captured from keybase messages)
 | Thur | Jan 20 | 23:22 | An AWS Abuse case was created via email request.
 | Thur | Jan 20 | 23:55 | The admin employee joined a zoom meeting with IPS team, to discuss the current situation and details.
 | Fri | Jan 21 | 00:20 | Google Admin support chat was initiated for further investigation.
-| Fri | Jan 21 | 01:31 | Cleared all active sessions and third party integrations from admin users' Google account, enabling access to his calendar and email. The admin employee was removed from superadmin access in Google.
-| Fri | Jan 21 | 01:34 | Enabled admin employee's Google account only, leaving his Okta account disabled.
+| Fri | Jan 21 | 01:31 | Cleared all active sessions and third party integrations from admin users' Google account. The admin employee was removed from superadmin access in Google.
+| Fri | Jan 21 | 01:34 | Enabled admin employee's Google account only, leaving his Okta account disabled, allowing for the collection of email and access to calendar.
 | Fri | Jan 21 | 16:49 | The admin employee's Okta account was enabled.
 | Fri | Jan 21 | 17:02 | The affected employee's Google account was enabled. 
 | Fri | Jan 21 | 18:20 | The admin employee mentioned that the cause of the account suspension may have been due to a Rippling integration.
