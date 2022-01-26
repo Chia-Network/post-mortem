@@ -4,7 +4,7 @@
 
 __Type of Incident Detected__: Potential compromise of employee's Google Admin Account
 
-__Initial Concerns__: On Thursday, January 20th, 2021 at 22:04 (UTC) an employee's account was suspended by an admin account, per the audit logs. 
+__Initial Concerns__: On Thursday, January 20th, 2022 at 22:04 (UTC) an employee's account was suspended by an admin account, per the audit logs. 
                       However, the admin did not perform the suspension of the account and the action originated from an IP address associated with an
                       AWS EC2 instance.
 
