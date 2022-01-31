@@ -23,6 +23,7 @@ Date/Time Stamps (Captured from keybase messages)
 |-----|-------------|-----------|-------|
 | Thur | Jan 20 | 22:40 | Affected employee logged out of Google Workspace account and received a prompt that his account was disabled, upon attempting to log back in.
 | Thur | Jan 20 | 22:06 | IPS team observed that the affected employee's Google Workspace account was suspended by another employee with administrator rights, when reviewing the audit logs in Google Admin. No abnormal login activity for detected for either employee.
+| Thur | Jan 20 | 22:07 | The IPS team called the admin employee and confirmed that he did not suspend the account. 
 | Thur | Jan 20 | 22:08 | The IPS team suspended the Okta account of admin employee.
 | Thur | Jan 20 | 22:09 | The admin employee's Google Workspace account was then disabled. An IP address associated with the account suspension activity was determined to have a source from an Amazon Web Services (AWS) EC2 instance.
 | Thur | Jan 20 | 22:19 | Communications were initiated with Google to take a deeper look into the issue.
