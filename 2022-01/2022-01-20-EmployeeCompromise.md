@@ -9,7 +9,7 @@ __Initial Concerns__: On Thursday, January 20th, 2022 at 22:04 (UTC) an employee
                       AWS EC2 instance.
 
 __Involved Parties__: 
-Affected employee - Individual whose account was suspended.
+Affected employee: Individual whose account was suspended.
 
 Admin employee: Individual whose account performed the suspension action.
 
@@ -22,7 +22,7 @@ Date/Time Stamps (Captured from keybase messages)
 | Day | Date (2022) | Time (UTC) | Event |
 |-----|-------------|-----------|-------|
 | Thur | Jan 20 | 22:40 | Affected employee logged out of Google Workspace account and received a prompt that his account was disabled, upon attempting to log back in.
-| Thur | Jan 20 | 22:06 | IPS team observed that the affected employee's Google Workspace account was suspended by another employee with administrator rights, when reviewing the audit logs in Google Admin. No abnormal login activity for detected for either employee.
+| Thur | Jan 20 | 22:06 | IPS team observed that the affected employee's Google Workspace account was suspended by another employee with administrator rights, when reviewing the audit logs in Google Admin. No abnormal login activity was detected for either employee.
 | Thur | Jan 20 | 22:07 | The IPS team called the admin employee and confirmed that he did not suspend the account. 
 | Thur | Jan 20 | 22:08 | The IPS team suspended the Okta account of admin employee.
 | Thur | Jan 20 | 22:09 | The admin employee's Google Workspace account was then disabled. An IP address associated with the account suspension activity was determined to have a source from an Amazon Web Services (AWS) EC2 instance.
@@ -44,7 +44,7 @@ Date/Time Stamps (Captured from keybase messages)
 
 ## Root Cause
 
-The affected employee was converted from a 1099 employee to a W-2 employee in Rippling. Due to the current application integration of Rippling into the admin employee's Google Workspace account.
+The affected employee was converted from a 1099 employee to a W-2 employee in Rippling. Due to the current application integration of Rippling into the admin employee's Google Workspace account, the account was automatically suspended when the information changed and access to Google Workspace was temporarily removed.
 
 ## Resolution and recovery
 
