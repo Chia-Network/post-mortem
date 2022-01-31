@@ -52,4 +52,4 @@ Immediate communication was established when the affected employee noticed that 
 
 ## Corrective and Preventative Measure
 
-We are continuing to improve and refine our response process for handling security incidents. 
+The IPS team is continuing to improve and refine our response process for handling security incidents. 
