@@ -21,19 +21,19 @@ Date/Time Stamps (Captured from keybase messages)
 
 | Day | Date (2022) | Time (UTC) | Event |
 |-----|-------------|-----------|-------|
-| Thur | Jan 20 | 22:40 | Affected employee logged out of Google Workspace account and received a prompt that his account was disabled, upon attempting to log back in.
-| Thur | Jan 20 | 22:06 | IPS team observed that the affected employee's Google Workspace account was suspended by another employee with administrator rights, when reviewing the audit logs in Google Admin. No abnormal login activity was detected for either employee.
-| Thur | Jan 20 | 22:07 | The IPS team called the admin employee and confirmed that he did not suspend the account. 
-| Thur | Jan 20 | 22:08 | The IPS team suspended the Okta account of admin employee.
-| Thur | Jan 20 | 22:09 | The admin employee's Google Workspace account was then disabled. An IP address associated with the account suspension activity was determined to have a source from an Amazon Web Services (AWS) EC2 instance.
-| Thur | Jan 20 | 22:19 | Communications were initiated with Google to take a deeper look into the issue.
-| Thur | Jan 20 | 22:23 | The IPS team coordinated with AWS technical support chat to identify any information related to the AWS IP address.
-| Thur | Jan 20 | 22:40 | Aside from the 'cookies reset and forced re-login' and 'Account suspended' actions in the audit logs, no other abnormal activity was present.
-| Thur | Jan 20 | 23:15 | A zoom call with the AWS Incident Response Support team was started. The AWS team suggested verifying no abnormal activity exists in CloudTrail for Chia Network's two AWS accounts. They made the suggestion to create a SEV2 ticket and send an email to abuse@amazonaws.com for further troubleshooting. 
-| Thur | Jan 20 | 23:17 | No abnormal activity was found in CloudTrail.
-| Thur | Jan 20 | 23:20 | An AWS SEV2 support ticket was created.
-| Thur | Jan 20 | 23:22 | An AWS Abuse case was created via email request.
-| Thur | Jan 20 | 23:55 | The admin employee joined a zoom meeting with IPS team, to discuss the current situation and details.
+| Thur | Jan 28 | 22:40 | Affected employee logged out of Google Workspace account and received a prompt that his account was disabled, upon attempting to log back in.
+| Thur | Jan 28 | 22:06 | IPS team observed that the affected employee's Google Workspace account was suspended by another employee with administrator rights, when reviewing the audit logs in Google Admin. No abnormal login activity was detected for either employee.
+| Thur | Jan 28 | 22:07 | The IPS team called the admin employee and confirmed that he did not suspend the account. 
+| Thur | Jan 28 | 22:08 | The IPS team suspended the Okta account of admin employee.
+| Thur | Jan 28 | 22:09 | The admin employee's Google Workspace account was then disabled. An IP address associated with the account suspension activity was determined to have a source from an Amazon Web Services (AWS) EC2 instance.
+| Thur | Jan 28 | 22:19 | Communications were initiated with Google to take a deeper look into the issue.
+| Thur | Jan 28 | 22:23 | The IPS team coordinated with AWS technical support chat to identify any information related to the AWS IP address.
+| Thur | Jan 28 | 22:40 | Aside from the 'cookies reset and forced re-login' and 'Account suspended' actions in the audit logs, no other abnormal activity was present.
+| Thur | Jan 28 | 23:15 | A zoom call with the AWS Incident Response Support team was started. The AWS team suggested verifying no abnormal activity exists in CloudTrail for Chia Network's two AWS accounts. They made the suggestion to create a SEV2 ticket and send an email to abuse@amazonaws.com for further troubleshooting. 
+| Thur | Jan 28 | 23:17 | No abnormal activity was found in CloudTrail.
+| Thur | Jan 28 | 23:20 | An AWS SEV2 support ticket was created.
+| Thur | Jan 28 | 23:22 | An AWS Abuse case was created via email request.
+| Thur | Jan 28 | 23:55 | The admin employee joined a zoom meeting with IPS team, to discuss the current situation and details.
 | Fri | Jan 21 | 00:20 | Google Admin support chat was initiated for further investigation.
 | Fri | Jan 21 | 01:31 | Cleared all active sessions and third party integrations from admin users' Google account. The admin employee was removed from superadmin access in Google.
 | Fri | Jan 21 | 01:34 | Enabled admin employee's Google account only, leaving his Okta account disabled, allowing for the collection of email and access to calendar.
