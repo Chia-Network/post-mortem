@@ -24,8 +24,8 @@ AWS: Amazon Web Services, the cloud hosting provider.
 | Tues | Jun 28 | 21:30 | IPS turns off all EC2 instances in the impacted AWS account as a precautionary measure until further investigation can be done |
 | Tues | Jun 28 | 21:45 | Outside security experts consulted and on standby to assist |
 | Tues | Jun 28 | 21:55 | Reply sent to AWS acknowledging incident
-| Tues | Jun 28 | 22:21 | Active threat declared mitigated by the shutdown of the EC2 instances and forensics work to resume in morning |
-| Wed | Jun 29 | 7:05 | IPS team begins investigating and finds requests to .env files in the proxy logs that match the timestamps of the AWS report |
+| Tues | Jun 28 | 22:21 | Active incident declared mitigated by the shutdown of the EC2 instances and forensics work to resume in morning |
+| Wed | Jun 29 | 7:05 | IPS team begins investigating and finds requests to `.env` files in the proxy logs that match the timestamps of the AWS report |
 | Wed | Jun 29 | 10:50 | IPS team confirms IP address that lodged abuse complaint matches IP address of Climate Warehouse testing EC2 instance that had been shut down on Monday Jun 27.  This IP is found in the reverse proxy configuration as it hadn’t been removed when the EC2 instance was shut down and was therefore forwarding traffic to an IP that Chia no longer leased from AWS. |
 | Wed | Jun 29 | 11:34 | IPS team emails AWS with explanation of incident |
 | Wed | Jun 29 | 11:44 | Climate Warehouse testing nodes are brought back online |
@@ -47,7 +47,7 @@ The time on these requests matches the time of the AWS abuse report.  The abuse 
 
 On Monday, two days prior, we had shut down one of the EC2 testing instances in preparation for eventual decommissioning.  When an EC2 instance is shut down, its IP address is released and reassigned to the AWS pool for reassignment.  The IP address that filed the abuse complaint is the IP address of the instance we shut down Monday, which is the IP address the proxy was still forwarding to for this specific domain name.  
 
-This request for a .env file was part of a random security scan originating from a cheap cloud server.  These scans are very common on all web-facing IP addresses and do not indicate a compromise or a targeted attack.  Our proxy forwarded these requests to the old IP we no longer owned as the proxy hadn’t been updated when the testing EC2 instance was shut down. 
+This request for a `.env` file was part of a random security scan originating from a inexpensive cloud server.  These scans are very common on all web-facing IP addresses and do not indicate a compromise or a targeted attack.  Our proxy forwarded these requests to the old IP we no longer owned as the proxy hadn’t been updated when the testing EC2 instance was shut down. 
 
 ## Corrective and Preventative Measure
 
