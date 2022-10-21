@@ -1,0 +1,15 @@
+# Keybase Beta Participant Permissions Post Mortem
+## Issue Summary
+
+A user in the public beta farmers keybase group converted a keybase sub-channel to a big team and created a subchannel. The user shouldn’t have had the permission to begin with to be able to perform those actions.
+## Timeline (all times PST ) DATE RANGE. All times approximations
+
+10/20/2022 - 15:38 CST - a user, farmer_diamonds, converted the chia_network.public.beta_farmers from a sub-channel to a big team and created a sub-channel to the newly converted big team
+10/20/2022 - 15:41 CST - Discovered that the farmer beta group was converted and a subchannel was added
+10/20/2022 - 16:00 CST - Permission updated for all users from “writers” to “readers” in both the chia_network.public.beta_farmers channel and the chia_network.public.beta_consumers channel
+10/20/2022 - 22:00 CST - All open email based invitations were cancelled and resent with “reader” permissions. No other users with open email invites had joined after all user permissions were changed to “Reader”.
+## Resolution and recovery
+
+Publish a document for rules/guidelines for admins of a public keybase channel that can be shared with anyone in CNI who will be an admin of public channel
+File a bug/feature request to get Keybase to ensure the default role is what shows up when adding people to the keybase channel instead of currently defaulting to “writer”, until this is changed by Keybase, ensure that all non CNI users are put as “reader”. Currently even if the channel default permissions is set to readers only, when adding users the default is writers.
+
