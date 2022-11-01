@@ -1,0 +1,12 @@
+# Android Phone Incident
+## Issue Summary
+
+Pixel 5a with android 13
+employee device downloaded a suspicious file without user input. 
+The file was not present on the phone when searched for.  
+The phone then rebooted without user input. 
+No visibal traces of the event were present on the device.
+
+## Resolution and recovery
+
+Phone was airgapped using airplane mode while briefe investigation took place.  Once the investigation was over the phone was factory reset.  
