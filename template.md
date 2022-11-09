@@ -1,9 +1,9 @@
 # ISSUE NAME
 ## Issue Summary
 
-Lorum Ipsum Dolar
+Lorem ipsum dolor
 
-## Timeline (all times PST ) DATE RANGE. All times approximations
+## Timeline (all times PST) DATE RANGE. All times approximations
 
 12:45 PM PST DATE: Thing 1 happened
 
@@ -11,12 +11,12 @@ Lorum Ipsum Dolar
 
 ## Resolution and recovery
 
- Lorum Ipsum Dolar
+Sit amet, consectetur
 
 ## Additional Sections as required
 
-Lorum Ipsum Dolar
+Etiam quis dapibus
 
 ## Q&A
 
-Lorum Ipsum Dolar
+Curabitur vulputate felis
