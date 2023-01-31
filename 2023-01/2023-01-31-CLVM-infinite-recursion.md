@@ -8,7 +8,7 @@ The puzzle consists of CLVM (Chialisp Virtual Machine) code (https://chialisp.co
 
 A malicious CLVM program can be crafted such that, when run, will use an unreasonable amount of memory before it runs out of “cost”.
 We charge a cost for every operation and memory allocation in a CLVM program in order to restrict the amount of work and memory it can use from the computer validating a block or transaction. However, we overlooked the cost of allocating space on the virtual machine’s stack.
-## Timeline (all times PST) DATE RANGE. All times approximations
+## Timeline (all times PST) 10/14/2022 - 11/03/2022. All times approximations
 
 10/14/2022 - A researcher submitted a bug report via bugcrowd (https://bugcrowd.com/chia-network-bb) detailing the CLVM infinite recursion issue.
 
