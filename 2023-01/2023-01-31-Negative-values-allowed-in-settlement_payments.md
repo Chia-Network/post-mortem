@@ -16,7 +16,7 @@ When the TAIL execution outputs puzzle announcements that guard the input spends
 
 This allows for bypassing the explicit promise that in return of your input of coin(s) and their value you will get a specific type of coin(s) and value back when a counterparty takes up your offer.
 
-## Timeline (all times PST) DATE RANGE. All times approximations
+## Timeline (all times PST) 09/21/2022 - 11/03/2022. All times approximations
 
 09/21/2022 - A researcher submitted a bug report via bugcrowd (https://bugcrowd.com/chia-network-bb) detailing the Negative values allowed in settlement_payments.clvm issue.
 
