@@ -10,7 +10,7 @@ The wallet, on a coin spend, will run code that is applicable for the type of co
  
 The way exceptions were handled in the wallet code could result in a bad coinstate causing the wallet to rewind its database a few blocks and retry to synchronize, encountering the same issue again when the same bad coinstate was processed. This would prevent the wallet from progressing past the block with the bad coinstate.
 
-## Timeline (all times PST) DATE RANGE. All times approximations
+## Timeline (all times PST) 09/07/2022 - 11/03/2022. All times approximations
 
 09/07/2022 - A researcher provided details of the Wallet error handling causing infinite loop  issue via Keybase and Discord.
 
