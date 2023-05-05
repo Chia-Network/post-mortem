@@ -31,5 +31,5 @@ Password compromise of an employees' Okta account.
 ## Resolution and recovery
 
 The root cause was determined to be a malicious that was sent to the user from a trusted LinkedIn user.
-The trusted LinkedIn user was compromised, therefore, it came from a bad actor.Recovery included a reset of passwords
+The trusted LinkedIn user was compromised, therefore, it came from a bad actor. Recovery included a reset of passwords
 and a erase and reset of the user's MacBook. SentinelOne has been installed and a full disk scan completed.
