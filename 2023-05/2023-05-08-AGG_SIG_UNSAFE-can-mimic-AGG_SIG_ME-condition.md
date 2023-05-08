@@ -8,6 +8,16 @@ Both AGG_SIG_UNSAFE and AGG_SIG_ME conditions take a public_key and message, the
 
 Due to the message's ability to have any value (within size limits), it could mimic the AGG_SIG_ME condition where coin_id and additional_data are appended to the message when using AGG_SIG_UNSAFE.
 
+The core problem was that a coin issuing an AGG_SIG_ME and including its signature in the aggregate could be replaced by a spend issuing an AGG_SIG_UNSAFE and including the attacked coin's coin ID, and including the "additional_data" used for AGG_SIG_ME, in the message it signed. 
+
+The aggregate signature would be the same, even though the coin spend was replaced. 
+
+The worst case scenario is joining two coins, only one of the spends creates the new output. 
+
+An attacker could replace the spend creating the output with their own spend, and compensate for its signature by issuing an AGG_SIG_UNSAFE that mimics its AGG_SIG_ME, thus, gaining access to the coins for spending maliciously. 
+
+The soft fork (that just took affect) limits AGG_SIG_UNSAFE in a way that makes it impossible to mimic an AGG_SIG_ME. they are now, effectively, in separate domains.
+
 ## Timeline (all times PST)  12/01/2022 - 05/07/2023. All times approximations
 
 12/01/2022 - The issue was discovered by Chia.
