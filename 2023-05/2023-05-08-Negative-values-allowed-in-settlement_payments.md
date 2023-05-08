@@ -16,7 +16,7 @@ was still referenced in that code rendering the fix void.
 
 ## Resolution and recovery
 
-This issue was addressed in 1.7.0 by: Asserting the value to be positive before creating the outputs in https://github.com/Chia-Network/chia-blockchain/blob/main/chia/wallet/puzzles/settlement_payments.clvm
+This issue was addressed in 1.7.0 by: Asserting the value to be positive before creating the outputs in [https://github.com/Chia-Network/chia-blockchain/blob/main/chia/wallet/puzzles/settlement_payments.clsp](https://github.com/Chia-Network/chia-blockchain/blob/main/chia/wallet/puzzles/settlement_payments.clsp)
 and referencing this updated ChiaList puzzle in the code.
 
 The issue was not exploited on mainnet.
