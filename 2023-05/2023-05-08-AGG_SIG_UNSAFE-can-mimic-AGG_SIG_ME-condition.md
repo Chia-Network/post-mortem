@@ -18,7 +18,7 @@ Due to the message's ability to have any value (within size limits), it could mi
 
 ## Resolution and recovery
 
-This issue was addressed in 1.7.0 by: Making AGG_SIG_UNSAFE condition invalid if the message ends with additional_date at soft fork height 3630000.
+This issue was addressed in 1.7.0 by: Making AGG_SIG_UNSAFE condition invalid if the message ends with additional_data at soft fork height 3630000.
 
 
 No AGG_SIG_UNSAFE messages ending with additional_data were found in the revealed puzzles / solutions on mainnet.
