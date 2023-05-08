@@ -26,5 +26,3 @@ Even though users were instructed to disable direct messages, and sending them t
 In order to temporarily solve this issue, we manually verified users who were not able to join while the bot was offline. At the same time, we worked to create a second bot account in order to unblock user verification.
 
 The only difference is that the functionality for checking if direct messages are enabled was removed. This fix worked and doesn't run into ratelimiting issues like before, but does remove the validation.
-
-## Corrective and Preventative Measures
