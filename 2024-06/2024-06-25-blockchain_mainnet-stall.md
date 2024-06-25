@@ -14,11 +14,11 @@ The height that the chain stalled at was 4779033 block height with approximately
 
 01-10-2024
 
-	7:32 PM - The chain stalled at height 4779033.
+7:32 PM - The chain stalled at height 4779033.
 
-	7:38 PM - Monitoring of the Chia blockchain detected the chain stall; no new blocks were created for a time period over 5 minutes. Automation restarted the timelords that Chia Network Inc. operates and this resolved the issue after the restart completed and new blocks were created by the farmers. Anyone that possesses a timelord could have also restarted the chain by restarting their timelord as well.
+7:38 PM - Monitoring of the Chia blockchain detected the chain stall; no new blocks were created for a time period over 5 minutes. Automation restarted the timelords that Chia Network Inc. operates and this resolved the issue after the restart completed and new blocks were created by the farmers. Anyone that possesses a timelord could have also restarted the chain by restarting their timelord as well.
 
-	7:42 PM - New blocks being created again with approximately a 10 minutes gap between blocks during the chain stall.
+7:42 PM - New blocks being created again with approximately a 10 minutes gap between blocks during the chain stall.
 
 
 01-31-2024 - The fix was added to the code base for version 2.2.0.
