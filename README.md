@@ -35,13 +35,6 @@ post-mortem/
 4. Include relevant assets in the assets directory
 5. Submit a pull request
 
-### Maintaining the Repository
-- Keep post-mortems up to date with new information
-- Add cross-references to related incidents
-- Update resolution status when issues are fixed
-- Archive resolved incidents appropriately
-- Maintain asset organization
-
 ## Post-Mortem Template
 
 Use `template.md` as the base for all new post-mortems. The template includes:
@@ -53,7 +46,6 @@ Use `template.md` as the base for all new post-mortems. The template includes:
 
 ## Example Post-Mortem Structure
 
-Below is an example of how to structure a post-mortem, with explanatory notes in italics:
 
 ```markdown
 # [Issue Name]
@@ -119,14 +111,6 @@ Q: [Another common question]
 A: [Clear, concise answer]
 ```
 
-## Contributing
-
-1. Fork the repository
-2. Create a new branch for your post-mortem
-3. Follow the template structure
-4. Include all relevant details and assets
-5. Submit a pull request
-
 ## Guidelines
 
 - Be thorough but concise
@@ -140,10 +124,5 @@ A: [Clear, concise answer]
 ## Contact
 
 For questions about this repository or to report new incidents:
-- Create an issue in this repository
-- Contact the Chia Network team through official channels
-- Follow the incident reporting process in the Chia documentation
+- Contact the Chia Network team on the official Discord (Discord:https://discord.gg/chia)
 
-## License
-
-This repository is licensed under the same terms as the Chia Network software. See LICENSE file for details.
