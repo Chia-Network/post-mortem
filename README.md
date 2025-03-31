@@ -125,4 +125,4 @@ A: [Clear, concise answer]
 
 For questions about this repository:
 - Contact the Chia Network team on the official Discord (Discord:https://discord.gg/chia)
-
+- To report a security issue please use our bug bounty program (https://hackerone.com/chia_network)
