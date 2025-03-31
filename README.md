@@ -123,6 +123,6 @@ A: [Clear, concise answer]
 
 ## Contact
 
-For questions about this repository or to report new incidents:
+For questions about this repository:
 - Contact the Chia Network team on the official Discord (Discord:https://discord.gg/chia)
 
