@@ -24,10 +24,7 @@ In September 2025, the npm ecosystem experienced two significant supply-chain co
 - For the worm campaign, compromised tokens and weak credential hygiene enabled propagation: postinstall payloads harvested secrets and used them to push trojanized patch releases under maintainers’ namespaces
 
 ### Impact
-- Potential exposure for projects consuming the malicious versions during the live windows (billions of aggregate weekly downloads across affected libraries)
-- Browser‑side crypto‑drainer behavior risked address‑swap fraud for end‑users during on‑chain interactions
-- Secret leakage from developer machines/CI (npm tokens, GitHub PATs, cloud credentials) increased risk of subsequent lateral movement and package takeovers
-- Chia network had a near miss where we would have installed one of the common vulnerable dependencies had we not been alerted and checked pending package updates for all our repos. We did not install a vulnerable depdency but the near miss factor alerted us to some possible flaws in our process and we have taken steps to correct them. 
+- While Chia network was not impacted, Chia network did have a near miss where we would have installed one of the common vulnerable dependencies had we not been alerted and checked pending package updates for all our repos. We did not install a vulnerable depdency but the near miss factor alerted us to some possible flaws in our process and we have taken steps to correct them. 
 
 ### Detection
 - Community monitoring, vendor intel feeds, and social alerts (including maintainers and security researchers) identified anomalous diffs and behaviors quickly
@@ -46,16 +43,16 @@ In September 2025, the npm ecosystem experienced two significant supply-chain co
 ## Q&A
 
 Q: Were we affected?
-A: If your builds installed malicious versions within the incident windows or pulled from a cached private registry, impact is possible. Audit lockfiles/SBOMs and rebuild from a clean cache.
+A: Neither Chia network nor the blockchain were impacted. We recognized lessons learned from this massive NPM community issue and have improved our process and practices to ensure no future vulnerabilities exist.
 
 Q: What about end‑users?
-A: Browser‑facing apps bundling the tainted packages risked crypto address‑swap during wallet interactions. Hardware wallets with on‑device verification substantially mitigated risk.
+A: No Chia Blockchain or other end users were impacted 
 
 Q: What’s the likelihood of recurrence?
 A: High, given attacker ROI. Expect continued phishing of maintainers and token theft targeting postinstall vectors and CI.
 
 Q: What long‑term measures matter most?
-A: Phishing‑resistant MFA for maintainers, strict dependency hygiene, script blocking in CI, token hardening, and continuous supply‑chain monitoring.
+A: Phishing‑resistant MFA for maintainers, strict dependency hygiene, script blocking in CI, token hardening, and continuous supply‑chain monitoring. We have taken steps to improve our process around dependencies and feel we have create a more secure pattern around installation and life cycle management that manages all new information from this attack and its analysis. 
 
 ---
 
