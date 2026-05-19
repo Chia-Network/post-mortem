@@ -9,6 +9,8 @@ The issues were identified via a mix of internal security research and external 
 
 We have no evidence that leads us to believe these issues were ever used to exploit or attack the chain, or the Chia userbase. Prior to the activation of the fork which patched them. 
 
+We also wanted to note that the Chia cloud platform was patched against the issues in this post mortem at the same time this release was published. 
+
 ## Fixes implemented
 
 ### Wallet — offer acceptance and signing
