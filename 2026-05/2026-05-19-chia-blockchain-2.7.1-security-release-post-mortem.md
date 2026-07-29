@@ -60,12 +60,12 @@ Wallet transaction sends tracked in flight state inconsistently across initial s
   Shared `PriorityThreadPoolExecutor`: Block and unfinished block validation, mempool work, and wallet protocol servicing share a priority pool so trusted / high priority work is less likely to starve behind untrusted low priority load.
   Read only snapshots for block pre validation: Pre validation uses read only snapshots so concurrent mutation cannot race the validation view of chain state.
 
-### Related wallet SDK hardening
+### Wallet SDK — puzzle run cost and decompression bounds
 
-Companion changes in the chia wallet SDK (published in the same timeframe as this release cycle) align client side limits with node expectations:
+Companion changes in the chia wallet SDK (published in the same timeframe as this release cycle) close client side gaps that the node already treated more strictly, so applications built on the SDK inherit the same resource ceilings:
 
-  Puzzle evaluation cost: Running a puzzle through the SDK previously allowed an effectively unbounded cost ceiling. The SDK now caps evaluation at the consensus maximum block CLVM cost so local puzzle runs cannot exceed what the chain would allow.
-  Compressed puzzle decompression: Decompressing wallet puzzle payloads previously had no output size cap in the SDK. The SDK now rejects decompression that would expand beyond a fixed maximum (aligned with the existing chia blockchain wallet compression limit), so hostile compressed input cannot force unbounded memory growth during decode.
+  Puzzle evaluation cost: The SDK path that runs a puzzle locally previously used an effectively unbounded cost ceiling, so evaluation could consume far more CPU than the chain would ever accept for a single block. The SDK now caps that run at the consensus maximum block CLVM cost, matching what the chain allows, and fails when the limit is hit.
+  Compressed puzzle decompression: Wallet puzzle payloads can arrive zlib compressed. The SDK previously decompressed without an output size cap, so decompression could allocate a very large buffer relative to the compressed input. The SDK now rejects decompression that would expand beyond a fixed maximum aligned with the existing chia blockchain wallet compression limit, and surfaces a clear too large error instead of allocating without bound.
 
 ## Timeline (all times PST) 2026 03 26 through 2026 05 19. All times approximations
 
