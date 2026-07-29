@@ -66,9 +66,3 @@ Companion changes in the chia wallet SDK (published in the same timeframe as thi
 
 - Puzzle evaluation cost: The SDK path that runs a puzzle locally previously used an effectively unbounded cost ceiling, so evaluation could consume far more CPU than the chain would ever accept for a single block. The SDK now caps that run at the consensus maximum block CLVM cost, matching what the chain allows, and fails when the limit is hit.
 - Compressed puzzle decompression: Wallet puzzle payloads can arrive zlib compressed. The SDK previously decompressed without an output size cap, so decompression could allocate a very large buffer relative to the compressed input. The SDK now rejects decompression that would expand beyond a fixed maximum aligned with the existing chia blockchain wallet compression limit, and surfaces a clear too large error instead of allocating without bound.
-
-## Timeline (all times PST) 2026 03 26 through 2026 05 19. All times approximations
-
-- 2026 03 26: 2.7.0 released.
-- April 2026: Related wallet SDK cost and decompression limits land.
-- 2026 05 19: 2.7.1 released.
