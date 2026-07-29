@@ -16,7 +16,7 @@ We have no evidence that leads us to believe these issues were ever used to expl
 
 Several weight proof paths assumed well formed peer data and could throw, loop, or do disproportionate work on bad proofs:
 
-  Overflow proof of space edge case: One overflow path indexed a predecessor sub slot without a safe lower bound, so an invalid index could be mishandled instead of rejected. 2.7.1 adds an explicit bounds check and rejects that case.
+  Overflow proof of space edge case: One overflow validation path mishandled an out of range case instead of rejecting it. 2.7.1 adds an explicit bounds check and rejects that case.
   Fewer than two sub epoch summaries: Inner validation assumed enough summaries were present before reading earlier entries. 2.7.1 fails closed when too few summaries are present.
   Unbounded challenge segments per sub epoch: Validation could process oversized segment lists for a sub epoch. 2.7.1 caps segments per sub epoch from consensus constants and rejects oversized groups.
   Wallet fork index walk: Comparing an old weight proof to a new one could walk past the end of the shorter list. 2.7.1 pairs the two lists so the shorter proof bounds the loop.
