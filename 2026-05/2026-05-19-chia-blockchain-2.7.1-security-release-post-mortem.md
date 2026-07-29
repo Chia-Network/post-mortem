@@ -2,9 +2,9 @@
 
 ## Intro
 
-Chia blockchain 2.7.1 shipped on May 19th 2026, about eight weeks after 2.7.0. This post mortem covers security relevant fixes and hardening that first appear in 2.7.1. Everything shipped in 2.6.1 and 2.7.0 remains in 2.7.1, so upgrading from those releases still picks up the earlier wallet, peer protocol, and soft fork preparation work.
+Chia blockchain 2.7.1 shipped on May 19th 2026, about eight weeks after 2.7.0. This post mortem covers security relevant fixes and hardening that first appear in 2.7.1, plus closely related hardening from the same release cycle (including companion wallet SDK bounds published alongside that work). Everything shipped in 2.6.1 and 2.7.0 remains in 2.7.1, so upgrading from those releases still picks up the earlier wallet, peer protocol, and soft fork preparation work.
 
-2.7.1 is a broader maintenance release than 2.7.0. Alongside that product work, a large hardening set landed in 2.7.1: weight proof validation bounds, peer handshake and WebSocket abuse resistance, mempool transaction deduplication under concurrency, SyncStore crash paths, HintStore response caps, future gossip cache bounds, early list truncation during Streamable deserialization, and tighter inbound timelord and compact VDF request handling.
+2.7.1 is a broader maintenance release than 2.7.0. Alongside that product work, a large hardening set landed in 2.7.1: weight proof validation bounds, peer handshake and WebSocket abuse resistance, mempool and wallet transaction in flight bookkeeping, SyncStore crash paths, HintStore response caps, future gossip cache bounds, early list truncation during Streamable deserialization, tighter inbound timelord and compact VDF request handling, and concurrency limits around peak and sub slot catch up work. Related wallet SDK changes also capped puzzle evaluation cost and compressed puzzle decompression size.
 
 The issues were identified via a mix of internal security research and external bug bounty submissions.
 
@@ -31,6 +31,15 @@ Several weight proof paths assumed well formed peer data and could throw, loop, 
 
 When multiple peers delivered the same spend at once, the “already seen” check and expensive pre validation were not atomic, so concurrent workers could repeat full validation for the same transaction and churn the bounded seen cache. 2.7.1 marks a spend as in flight before pre validation, treats in flight as already including, and clears the in flight marker in a finally block so known invalid bundles stay in the seen cache without revalidation storms.
 
+### Wallet — transaction send and acknowledgement tracking
+
+Wallet transaction sends tracked in flight state inconsistently across initial send, reconnect resend, and RPC push paths, and acknowledgement handling could clear resend state for acknowledgements that did not match an active send. 2.7.1 centralizes send and tracking so closed peers do not get in flight markers, and only acknowledgements that match an actually in flight transaction update wallet state; unmatched acknowledgements are ignored.
+
+### Full node — peak and sub slot catch up concurrency
+
+  Sub slot catch up: When a peer reported an unknown previous challenge, the signage point / end of sub slot path could run a long catch up loop with no concurrency cap, unlike the already bounded peak handler. 2.7.1 applies a limited concurrency gate to that catch up work so excess requests are dropped when capacity is full, and disconnects peers that exhaust the catch up loop so connection slots are not held indefinitely.
+  New peak under load: Peak handling already used a bounded semaphore, but slow peers could hold slots for a long request timeout, and inbound peak announcements could still queue heavily while slots were busy. Follow on hardening in this release cycle shortens the backtrack block request timeout used on that path and adds admission control so that when active peak slots are full and at least one outbound full node peer exists, extra inbound peak announcements are dropped rather than queued; if the node has no outbound full node peers, inbound peaks still use the bounded queue.
+
 ### Full node stability — asserts and sync state
 
   Unknown parent during `add_block`: A naked assert on a missing parent block record could terminate the process during sync. 2.7.1 replaces that assert with an explicit error path.
@@ -51,7 +60,15 @@ When multiple peers delivered the same spend at once, the “already seen” che
   Shared `PriorityThreadPoolExecutor`: Block and unfinished block validation, mempool work, and wallet protocol servicing share a priority pool so trusted / high priority work is less likely to starve behind untrusted low priority load.
   Read only snapshots for block pre validation: Pre validation uses read only snapshots so concurrent mutation cannot race the validation view of chain state.
 
+### Related wallet SDK hardening
+
+Companion changes in the chia wallet SDK (published in the same timeframe as this release cycle) align client side limits with node expectations:
+
+  Puzzle evaluation cost: Running a puzzle through the SDK previously allowed an effectively unbounded cost ceiling. The SDK now caps evaluation at the consensus maximum block CLVM cost so local puzzle runs cannot exceed what the chain would allow.
+  Compressed puzzle decompression: Decompressing wallet puzzle payloads previously had no output size cap in the SDK. The SDK now rejects decompression that would expand beyond a fixed maximum (aligned with the existing chia blockchain wallet compression limit), so hostile compressed input cannot force unbounded memory growth during decode.
+
 ## Timeline (all times PST) 2026 03 26 through 2026 05 19. All times approximations
 
   2026 03 26: 2.7.0 released.
+  April 2026: Related wallet SDK cost and decompression limits land.
   2026 05 19: 2.7.1 released.
